@@ -16,6 +16,7 @@ This project includes the steps used in cyber attacks and the tools utilized in 
 
 ## Ekran Görüntüleri
 
+![Uygulama Ekran Görüntüsü](https://r.resimlink.com/kx2MZDWBPFC5.png)
+![Uygulama Ekran Görüntüsü](https://r.resimlink.com/G4pxszXWI.png)
 ![Uygulama Ekran Görüntüsü](https://r.resimlink.com/UOnYv.png)
-
   
