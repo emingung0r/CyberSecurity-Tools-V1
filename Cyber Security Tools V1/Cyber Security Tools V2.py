@@ -1,3 +1,29 @@
+#######################################################################################################
+#                                          NMAP ENTEGRASYONU EKLENDİ                                   #
+#                                                                                                     #
+# Bu adım, KEŞİF (Reconnaissance) aşamasında Nmap aracının tam anlamıyla çalışmasını sağlar.          #
+#                                                                                                     #
+# 1. Kullanıcıdan taranacak hedef alınır (IP adresi veya alan adı).                                  #
+# 2. Nmap komutu, Python'un subprocess modülü kullanılarak çalıştırılır.                             #
+# 3. Çıktı, kullanıcıya terminalde gösterilir ve aynı zamanda bir rapor dosyasına kaydedilir.        #
+# 4. Olası hatalar ele alınmıştır:                                                                   #
+#    - Nmap yüklü değilse kullanıcıya bilgilendirme yapılır.                                         #
+#    - Hatalı girişler için try-except yapıları kullanılır.                                          #
+#                                                                                                     #
+# Fonksiyonlar:                                                                                      #
+# --------------------------------------------------------------------------------------------------- #
+# - nmap_tarama(hedef): Kullanıcının belirttiği hedef üzerinde Nmap taraması yapar.                  #
+# - rapor_yaz(rapor): Nmap çıktısını, tarih ve saate göre adlandırılmış bir dosyaya kaydeder.        #
+# - kesif_menu(): Kullanıcıdan hangi aracın seçileceğini ister. Nmap için özel bir işlem başlatır.   #
+#                                                                                                     #
+# Bu düzenleme ile:                                                                                  #
+# - Nmap tamamen çalışır hale getirildi.                                                            #
+# - Kullanıcı dostu hata yönetimi sağlandı.                                                         #
+# - Dinamik raporlama eklendi.                                                                      #
+#######################################################################################################
+
+
+
 import os
 import datetime
 import subprocess  # Alt süreçleri çalıştırmak için
