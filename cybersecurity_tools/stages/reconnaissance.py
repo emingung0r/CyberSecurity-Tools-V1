@@ -6,21 +6,30 @@ def reconnaissance_menu():
     """Handles the reconnaissance stage menu and Nmap scans.
     Keşif aşaması menüsünü ve Nmap taramalarını yönetir."""
     clear_screen()
-    print_header("1. RECONNAISSANCE", "Reconnaissance Stage - Nmap Usage") #Başlıklar
-    print("1. Nmap Scan") #Nmap Taraması
+    print_header("1. RECONNAISSANCE", "Reconnaissance Stage - Nmap Usage")
+    print("1. Nmap Scan")
     try:
-        tool_choice = int(input("Select a tool: ")) #Bir araç seçin
+        tool_choice = int(input("Select a tool: "))
         if tool_choice == 1:
-            target = input("Enter target to scan (e.g., 127.0.0.1 or example.com): ") #Taranacak hedefi girin
-            arguments = input("Enter additional arguments (leave blank if none): ") #Ek argümanlar girin
-            print(f"Starting Nmap scan: {target}...\n") #Nmap taraması başlatılıyor
+            target = input("Enter target to scan: ")
+            arguments = input("Enter additional arguments (leave blank if none): ")
+            print(f"Starting Nmap scan: {target}...\n")
             nmap_result = nmap.nmap_scan(target, arguments)
             print(nmap_result)
-            print("\nNmap operation completed.\n") #Nmap işlemi tamamlandı
-            input("Press Enter to continue...") #Devam etmek için Enter'a basın
+            print("\nNmap operation completed.\n")
+            input("Press Enter to continue...")
+            return { # Sonuçları dictionary olarak döndür
+                "stage": "Reconnaissance",
+                "tool": "Nmap",
+                "target": target,
+                "arguments": arguments,
+                "result": nmap_result
+            }
         else:
-            print("Invalid tool selection.") #Geçersiz araç seçimi
-            input("Press Enter to continue...") #Devam etmek için Enter'a basın
+            print("Invalid tool selection.")
+            input("Press Enter to continue...")
+            return None
     except ValueError:
-        print("Invalid input. Please enter a number.") #Geçersiz giriş. Lütfen bir sayı girin.
-        input("Press Enter to continue...") #Devam etmek için Enter'a basın
+        print("Invalid input. Please enter a number.")
+        input("Press Enter to continue...")
+        return None
