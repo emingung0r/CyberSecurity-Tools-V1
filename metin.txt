@@ -1,0 +1,57 @@
+Nmap aracını seçtikten sonra kullanıcı hangi parametreleri kullanmak istediğini sorsun ve bunu gösterelim kullanıcıya örneğin şu şekilde  
+
+ Nmap  
+
+ sn: Port taraması yapma anlamına gelir. 
+
+ n: DNS Çözümlemesi yapma anlamına gelir. 
+
+ v, vv, vvv: Ekrana gösterilecek detayları arttırır. 
+
+ F: Daha hızlı tarama yapar. Daha az sonuç bulur. 
+
+ sS:Syn Taraması Yapar 
+
+ -reason: Bulduğu bir sonucun sebebini gösterir. 
+
+ -open: Sadece açık Portları gösterir. 
+
+ p-: Bir IP üzerinde bulunması muhteme 65535 portun hepsini tarar. 
+
+ sV: Açık portta çalışan servisin ne olduğunu bulmaya çalışır. sC ile birlikte kullanılırsa işe yarar. 
+
+ sC: sV ile versiyon tespiti yapılırken nmap scriptlerini kullanır. 
+
+ p: Sadece bu parametreden sonra belirtilen portları tarar. 
+
+ şekilinde kullanıcı tercihlerini yapsın  
+
+Senden istediğim Nmap taraması başlatılıyor: scanme.nmap.org -sn -v -sS...
+
+Nmap’te Parametrelerin Kullanımı
+
+
+
+• Uyumluluk: Nmap’te aynı anda birden fazla parametre kullanılabilir, ancak bazı parametreler birbiriyle çakışabilir veya uyumsuz olabilir. Örneğin, hem -sS (SYN scan) hem de -sT (TCP connect scan) gibi farklı tarama türlerini aynı anda kullanamazsınız.
+
+• Kapsam: Nmap parametreleri genellikle farklı amaçlara hizmet eder, bu nedenle çok sayıda parametreyi mantıklı bir şekilde birleştirmek mümkündür.
+
+Pratik Kısıtlamalar
+
+
+
+1. Komut Satırı Uzunluğu: Çoğu işletim sisteminde komut satırı uzunluğunun bir sınırı vardır (Linux için genellikle 128 KB civarında).
+
+2. Parametre Uyumluluğu: Bazı parametreler birbiriyle çelişebilir, bu da Nmap’in hata vermesine neden olabilir.
+
+3. Kaynak Kullanımı: Çok fazla özellik aynı anda kullanıldığında, tarama daha uzun sürebilir ve daha fazla sistem kaynağı tüketebilir.
+
+
+
+İdeal Kullanım
+
+
+
+Aynı anda çok sayıda parametre yerine, belirli bir hedefe yönelik optimize edilmiş bir komut yapısı kullanmak daha verimlidir. Bu, taramaların hızlı ve doğru olmasını sağlar.
+
+şeklinde düzenle bana düzenlediğin yerleri de göster kod içerisinde de yorum satırı olarak belirt . terminal çıktısında da düzeltilen yerleri göster bana
