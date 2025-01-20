@@ -2,8 +2,6 @@ import datetime
 import os
 import subprocess
 import platform
-
-# interface.py dosyasından fonksiyonları import et
 from interface import clear_screen, print_header
 from stages import reconnaissance
 from reports import report_generator
@@ -46,20 +44,63 @@ def check_system():
 
     input("Devam etmek için Enter'a basın...")
 
+def report_menu(results):
+    """Rapor oluşturma menüsünü gösterir."""
+    clear_screen()
+    print_header("Rapor Oluşturma")
+
+    if not results:
+        print("Oluşturulacak bir rapor bulunmamaktadır.")
+        input("Devam etmek için Enter'a basın...")
+        return
+
+    print("Hangi formatta rapor oluşturmak istersiniz?")
+    print("1. Metin (.txt)")
+    print("2. PDF (.pdf)")
+    print("3. Word (.docx)")
+
+    while True:
+        try:
+            format_choice = int(input("Seçiminizi girin: "))
+            if format_choice in (1, 2, 3):
+                break
+            else:
+                print("Geçersiz seçim. Lütfen geçerli bir seçenek girin.")
+        except ValueError:
+            print("Lütfen bir sayı girin.")
+
+    format_list = ["txt", "pdf", "docx"]
+    format = format_list[format_choice - 1]
+
+    for result in results:
+        report_path, report_content = report_generator.generate_report(result, format)
+
+        # Hata kontrolü (Düzeltilmiş kısım burası)
+        if isinstance(report_path, str) and (report_path.startswith("1001:") or report_path.startswith("1002:") or report_path.startswith("2001:") or report_path.startswith("2002:")) :
+            print(report_path)  # Hata mesajını yazdır
+            input("Devam etmek için Enter'a basın...")
+            continue  # Bir sonraki rapora geç
+
+        report_generator.save_report_to_file((report_path, report_content))  # Raporu kaydet
+
+    print(f"Rapor 'reports' klasörüne kaydedildi.")
+    input("Devam etmek için Enter'a basın...")
+
 def main_menu():
     """Ana menüyü gösterir."""
     clear_screen()
     print_header("Siber Güvenlik Değerlendirme Aracı")
     print("1. Keşif Aşaması")
     print("7. Sistem Kontrolü")
-    print("0. Çıkış ve Rapor Oluştur")
+    print("8. Rapor Oluştur")
+    print("0. Çıkış")
     while True:
         try:
             choice = int(input("Seçiminizi girin: "))
-            if choice in (0, 1, 7):
+            if choice in (0, 1, 7, 8):
                 return choice
             else:
-                print("Geçersiz seçim. Lütfen 0, 1 veya 7 girin.")
+                print("Geçersiz seçim. Lütfen 0, 1, 7 veya 8 girin.")
                 input("Devam etmek için Enter'a basın...")
         except ValueError:
             print("Lütfen bir sayı girin.")
@@ -72,15 +113,6 @@ if __name__ == "__main__":
     while True:
         choice = main_menu()
         if choice == 0:
-            if results:
-                timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-                filename = f"cybersecurity_report_{timestamp}.txt"
-                for result in results:
-                    report = report_generator.generate_report(result)
-                    report_generator.save_report_to_file(report, filename, "reports")
-                print(f"Raporlar 'reports' klasörüne kaydedildi.")
-            else:
-                print("Gerçekleştirilen bir işlem bulunmamaktadır. Rapor oluşturulmadı.")
             print("Programdan çıkılıyor.")
             break
         elif choice == 1:
@@ -89,6 +121,8 @@ if __name__ == "__main__":
                 results.append(result)
         elif choice == 7:
             check_system()
+        elif choice == 8:
+            report_menu(results)
         else:
             print("Geçersiz seçim.")
             input("Devam etmek için Enter'a basın...")
