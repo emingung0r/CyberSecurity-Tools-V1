@@ -1,0 +1,59 @@
+Proje Yapısı Analizi:
+Ana klasörler ve görevleri:
+
+stages/: Penetrasyon testinin farklı aşamalarını içeren modüller
+tools/: Kullanılan güvenlik araçlarının Python wrapper'ları
+reports/: Raporlama işlemleri için modüller
+
+Ana Dosyalar:
+main.py:
+
+Uygulamanın ana giriş noktası
+Menü sistemi ve aşama yönetimi
+Log sistemi entegrasyonu
+
+Hata yönetimi
+interface.py:
+
+Kullanıcı arayüzü fonksiyonları
+Ekran temizleme
+Menü gösterimi
+Başlık formatlaması
+
+
+Sistem Kontrol Mekanizması:
+system_check.py:
+
+Gerekli araçların kontrolü
+Python modüllerinin kontrolü
+Eksik bileşenlerin otomatik kurulumu
+Platform bağımlı kurulum yönetimi
+
+Güvenlik Aşamaları:
+Her bir aşama modülü (stages/ klasöründe):
+
+Keşif (Reconnaissance)
+Tarama (Scanning)
+Erişim Kazanma (Gaining Access)
+Hak Yükseltme (Privilege Escalation)
+İz Sürmeyi Engelleme (Covering Tracks)
+Bilgi Toplama (Information Gathering)
+
+Araç Entegrasyonları:
+tools/ klasöründeki her bir araç için wrapper:
+
+Nmap
+Shodan
+Maltego
+Nikto
+OWASP ZAP
+Metasploit
+Burp Suite
+
+Raporlama Sistemi:
+reports/ klasöründe:
+
+Rapor oluşturma
+Log tutma
+Sonuçların formatlanması
+Kodun genel yapısı profesyonel ve modüler bir yaklaşım sergilemekte. Hata yönetimi, log tutma ve kullanıcı arayüzü iyi düşünülmüş. Güvenlik testlerinin standart aşamalarını kapsamlı bir şekilde ele almış.

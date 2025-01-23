@@ -1,0 +1,333 @@
+2025-01-23 13:16:27,701 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.
+2025-01-23 13:27:58,669 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.
+2025-01-23 13:29:09,019 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.
+2025-01-23 13:29:51,315 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.
+2025-01-23 13:31:01,957 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.
+2025-01-23 13:31:10,830 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:11,889 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:12,472 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:12,991 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:13,464 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:13,710 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:13,914 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:14,114 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:14,316 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:14,498 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:14,721 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:14,879 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:15,062 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:15,230 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:15,415 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:15,621 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:15,769 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:15,951 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:16,766 - ERROR - Tarama Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/scanning.py", line 6, in scanning_menu
+    print_header("2. TARAMA AŞAMASI", "Tarama Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:17,603 - ERROR - Erişim Kazanma Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/gaining_access.py", line 5, in gaining_access_menu
+    print_header("3. ERİŞİM KAZANMA AŞAMASI", "Erişim kazanma aşaması araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:18,140 - ERROR - Hak Yükseltme Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/privilege_escalation.py", line 6, in privilege_escalation_menu
+    print_header("4. HAK YÜKSELTME AŞAMASI", "Hak yükseltme aşaması araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:18,908 - ERROR - İz Sürmeyi Engelleme Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/covering_tracks.py", line 5, in covering_tracks_menu
+    print_header("5. İZ SÜRMEYİ ENGELLEME AŞAMASI", "İz sürmeyi engelleme aşaması araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:19,380 - ERROR - Bilgi Toplama Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/information_gathering.py", line 5, in information_gathering_menu
+    print_header("6. BİLGİ TOPLAMA AŞAMASI", "Bilgi toplama aşaması araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:44,383 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.
+2025-01-23 13:31:47,114 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:47,820 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:48,397 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:48,787 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:49,059 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:49,325 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:31:50,497 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:32:28,443 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:32:29,871 - ERROR - Keşif Aşaması aşamasında hata oluştu
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/main.py", line 86, in main
+    result = stage["menu_function"]()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/stages/reconnaissance.py", line 6, in reconnaissance_menu
+    print_header("1. RECONNAISSANCE", "Keşif Aşaması Araçları")
+TypeError: print_header() takes 1 positional argument but 2 were given
+2025-01-23 13:33:47,774 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.
+2025-01-23 13:36:29,425 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.
+2025-01-23 14:12:10,445 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.
+2025-01-23 14:20:36,345 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.
+2025-01-23 14:21:15,048 - ERROR - Shodan kontrol edilirken hata oluştu: Command '['shodan', '--version']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/aemingungor/VS Code /CyberSecurity-Tools-V1/cybersecurity_tools/system_check.py", line 31, in check_tool
+    subprocess.run([command, "--version"], capture_output=True, text=True, check=True)
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['shodan', '--version']' returned non-zero exit status 2.

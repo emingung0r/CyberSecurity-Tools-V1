@@ -1,57 +1,147 @@
-Nmap aracını seçtikten sonra kullanıcı hangi parametreleri kullanmak istediğini sorsun ve bunu gösterelim kullanıcıya örneğin şu şekilde  
+# -------------------------------------------------------------------------------------
+# ÖNERİLER ve İYİLEŞTİRMELER
+# -------------------------------------------------------------------------------------
 
- Nmap  
+# -------------------------------------------------------------------------------------
+# 1. tools Modüllerinin Kullanımı:
+#    main.py dosyanızda, tools klasöründeki modülleri içe aktarıyorsunuz (from tools import nmap, shodan, ...).
+#    Ancak, bu modüllerin içindeki fonksiyonları henüz kullanmıyorsunuz. Her bir aşama için ilgili
+#    araçları kullanarak fonksiyonlar oluşturabilir ve bu fonksiyonları aşama menülerinden
+#    çağırabilirsiniz. Bu, uygulamanıza gerçek bir sızma testi işlevi katacaktır.
+#
+#    Örnek:
+#    tools/nmap.py dosyasına bir scan_host() fonksiyonu ekleyerek, bu fonksiyonu
+#    stages/reconnaissance.py dosyasındaki keşif aşamasında kullanabilirsiniz.
+# -------------------------------------------------------------------------------------
 
- sn: Port taraması yapma anlamına gelir. 
+# -------------------------------------------------------------------------------------
+# 2. Aşamaların Daha Detaylı Yapılandırılması:
+#    stages sözlüğünüzde, her aşama için sadece modül, menü fonksiyonu ve isim tutuluyor.
+#    Bu sözlüğe, her aşama için kullanılması gereken araçlar, gerekli parametreler veya diğer
+#    konfigürasyon bilgileri gibi ek bilgiler ekleyebilirsiniz. Bu, aşamaları daha esnek ve
+#    özelleştirilebilir hale getirecektir.
+#
+#    Örnek:
+#    stages = {
+#        1: {"module": reconnaissance, "menu_function": reconnaissance.reconnaissance_menu, "name": "Keşif Aşaması", "tools": ["nmap", "shodan"]},
+#        ...
+#    }
+# -------------------------------------------------------------------------------------
 
- n: DNS Çözümlemesi yapma anlamına gelir. 
+# -------------------------------------------------------------------------------------
+# 3. Hata Yönetimi ve Loglama:
+#    Kodunuzda hata yönetimi ve loglama mevcut, bu iyi bir uygulama. Ancak, log mesajlarını
+#    daha detaylı hale getirebilirsiniz. Örneğin, hangi araçların kullanıldığı, hangi
+#    parametrelerin girildiği gibi bilgileri loglayabilirsiniz. Bu, daha sonra rapor oluştururken
+#    veya sorun giderme sırasında çok faydalı olacaktır.
+#
+#    Örnek:
+#    logging.info(f"Nmap taraması başlatıldı: Hedef: {target}, Seçenekler: {options}")
+#    try:
+#        ...
+#    except Exception as e:
+#        logging.exception(f"Nmap taraması sırasında hata oluştu: {e}")
+# -------------------------------------------------------------------------------------
 
- v, vv, vvv: Ekrana gösterilecek detayları arttırır. 
+# -------------------------------------------------------------------------------------
+# 4. Raporlama:
+#    Raporlama modülünüzün daha detaylı bilgiler içermesini sağlayabilirsiniz. Örneğin, her
+#    aşamada elde edilen sonuçları, kullanılan araçları, bulunan zafiyetleri ve önerilen
+#    çözümleri raporda gösterebilirsiniz.
+#
+#    Örnek:
+#    Rapor çıktısında aşama adı, kullanılan araçlar, hedef, seçenekler ve sonuçlar gibi
+#    bilgiler yer alabilir.
+# -------------------------------------------------------------------------------------
 
- F: Daha hızlı tarama yapar. Daha az sonuç bulur. 
-
- sS:Syn Taraması Yapar 
-
- -reason: Bulduğu bir sonucun sebebini gösterir. 
-
- -open: Sadece açık Portları gösterir. 
-
- p-: Bir IP üzerinde bulunması muhteme 65535 portun hepsini tarar. 
-
- sV: Açık portta çalışan servisin ne olduğunu bulmaya çalışır. sC ile birlikte kullanılırsa işe yarar. 
-
- sC: sV ile versiyon tespiti yapılırken nmap scriptlerini kullanır. 
-
- p: Sadece bu parametreden sonra belirtilen portları tarar. 
-
- şekilinde kullanıcı tercihlerini yapsın  
-
-Senden istediğim Nmap taraması başlatılıyor: scanme.nmap.org -sn -v -sS...
-
-Nmap’te Parametrelerin Kullanımı
-
-
-
-• Uyumluluk: Nmap’te aynı anda birden fazla parametre kullanılabilir, ancak bazı parametreler birbiriyle çakışabilir veya uyumsuz olabilir. Örneğin, hem -sS (SYN scan) hem de -sT (TCP connect scan) gibi farklı tarama türlerini aynı anda kullanamazsınız.
-
-• Kapsam: Nmap parametreleri genellikle farklı amaçlara hizmet eder, bu nedenle çok sayıda parametreyi mantıklı bir şekilde birleştirmek mümkündür.
-
-Pratik Kısıtlamalar
-
-
-
-1. Komut Satırı Uzunluğu: Çoğu işletim sisteminde komut satırı uzunluğunun bir sınırı vardır (Linux için genellikle 128 KB civarında).
-
-2. Parametre Uyumluluğu: Bazı parametreler birbiriyle çelişebilir, bu da Nmap’in hata vermesine neden olabilir.
-
-3. Kaynak Kullanımı: Çok fazla özellik aynı anda kullanıldığında, tarama daha uzun sürebilir ve daha fazla sistem kaynağı tüketebilir.
+# -------------------------------------------------------------------------------------
+# 5. Kullanıcı Arayüzü İyileştirmeleri:
+#    Kullanıcı arayüzünü daha kullanıcı dostu hale getirebilirsiniz. Örneğin, menüleri daha
+#    düzenli gösterebilir, kullanıcılara daha fazla bilgi verebilir ve girişleri daha iyi
+#    doğrulayabilirsiniz.
+#
+#    Örnek:
+#    Menüleri numaralandırılmış listeler halinde göstermek, kullanıcıdan geçerli girişler
+#    beklemek ve hata mesajlarını daha bilgilendirici hale getirmek.
+# -------------------------------------------------------------------------------------
 
 
 
-İdeal Kullanım
+
+sistem kontrolü istediğimiz gibi çalışmıyor.
+kullanıcının sisteminde hangisi eksikse onu eklemesini sağlamak için örnek bir çıktı
+oluşturmaya çalışacağım. 
+örneğin kullanıcıda eksik olan araçlar ve tools
+    1.nmap
+    2.pdf2
+
+eksik olan araçları yüklemek ister misiniz?(Y/N):Y
+    hangi tools yüklemek istersiniz?
+        kullanıcı seçimi:1
+        Nmap Yükleniyor.
+        Nmap Yüklendi.
+    Modül yüklemek ister misiniz?
+        kullanıcı seçimi:5 (hepsi)
+        Bütün modüüller yükledni.
+
+şeklinde bir sistem kontrol ekranı oluşturulacak. 
+Bu işlem sonra tekrardan sistem kontrolü eklenecek ve eksiksiz olduğunda ana ekrana geçiş sağlanacak.
 
 
 
-Aynı anda çok sayıda parametre yerine, belirli bir hedefe yönelik optimize edilmiş bir komut yapısı kullanmak daha verimlidir. Bu, taramaların hızlı ve doğru olmasını sağlar.
 
-şeklinde düzenle bana düzenlediğin yerleri de göster kod içerisinde de yorum satırı olarak belirt . terminal çıktısında da düzeltilen yerleri göster bana
+
+================================================== Sistem ve Modül Kontrolü ================================================== =================== Sistem Araçları Kontrolü: ===================
+✅ Nmap (Ağ tarayıcısı) kurulu.
+❌ Shodan (İnternet cihaz arama motoru) - Shodan bulunamadı. Lütfen Shodan'ı yükleyin.
+❌ Nikto (Web sunucu tarayıcısı) - Nikto bulunamadı. Lütfen Nikto'ı yükleyin.
+❌ OWASP ZAP (Web uygulama güvenlik tarayıcısı) - OWASP ZAP bulunamadı. Lütfen OWASP ZAP'ı yükleyin.
+❌ Metasploit (Sızma testi çerçevesi) - Metasploit bulunamadı. Lütfen Metasploit'ı yükleyin.
+❌ Burp Suite (Web uygulama güvenlik test platformu) - Burp Suite bulunamadı. Lütfen Burp Suite'ı yükleyin.
+
+=================== Python Modülleri Kontrolü: ===================
+✅ PyPDF2: Kurulu
+✅ reportlab: Kurulu
+❌ python-docx: python-docx bulunamadı. Kurulum için: pip install python-docx
+❌ pypdf2: pypdf2 bulunamadı. Kurulum için: pip install pypdf2
+
+Eksik araçlar/modüller bulundu. Kurulum yapmak ister misiniz? (e/h)
+
+> e
+Kurulacak Araçlar:
+
+Shodan
+Nikto
+OWASP ZAP
+Metasploit
+Burp Suite
+Kurmak istediğiniz araçların numaralarını virgülle ayırarak girin (örn: 1,2,3) veya tümünü kurmak için 't': 1
+
+Shodan kuruluyor...
+Collecting shodan
+Successfully built shodan
+Installing collected packages: XlsxWriter, click-plugins, shodan
+Successfully installed XlsxWriter-3.2.1 click-plugins-1.1.1 shodan-1.31.0
+✅ shodan başarıyla kuruldu.
+
+Kurulacak Modüller:
+
+python-docx
+pypdf2 Kurmak istediğiniz modüllerin numaralarını virgülle ayırarak girin (örn: 1,2) veya tümünü kurmak için 't': bu ekranda şunları yapmanı isytiyorum :
+ana başlık her zaman ortada olacak.
+Kurulacaklar araçlar başlığı da aynı diğer başlıklar gibi gösterilsin . Daha farklı önerilerin olursa da programı geliştirmek açısından bana desteklerini bekliyorum
+
+
+
+
+
+
+Önerilen diğer geliştirmeler:
+
+Renkli çıktı eklenebilir (örneğin başlıklar mavi, başarılı işlemler yeşil, hatalar kırmızı olabilir)
+İlerleme çubuğu eklenebilir (özellikle kurulum işlemleri için)
+Kurulum sonrası otomatik kontrol eklenebilir
+Detaylı kurulum logları tutulabilir
+Kurulum başarısız olduğunda alternatif çözüm önerileri sunulabilir
+Sistem gereksinimleri kontrolü eklenebilir (disk alanı, RAM, işlemci vb.)
+Yüklü araçların sürüm kontrolü ve güncelleme önerisi eklenebilir
